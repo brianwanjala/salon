@@ -1,0 +1,25 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<h2>Book Appointment</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Service</label>
+    {{ form.service }}
+
+    <label>Barber</label>
+    {{ form.barber }}
+
+    <label>Date</label>
+    {{ form.date }}
+
+    <label>Time</label>
+    {{ form.time }}
+
+    <button type="submit">Book Appointment</button>
+</form>
+
+{% endblock %}
